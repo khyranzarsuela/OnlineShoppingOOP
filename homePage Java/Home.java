@@ -2,8 +2,6 @@ import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JTextField;
-
 import java.awt.event.*;
 
 public class Home extends JFrame implements ActionListener {
@@ -11,8 +9,9 @@ public class Home extends JFrame implements ActionListener {
 
     private JLabel title;
     private JButton searchBtn;
-    private JButton btnElectronics, btnClothes, btnFood, btnSignup, btnLogin;
-    private JTextField txtSearch;
+    private JButton btnElectronics, btnClothes, btnBag,  btnShoes,btnA;
+    
+    private JComboBox btnBox;
 
 
 
@@ -29,9 +28,16 @@ public class Home extends JFrame implements ActionListener {
         title.setFont(new java.awt.Font("Arial", java.awt.Font.BOLD, 24));
         add(title);
 
-        txtSearch = new JTextField();
-        txtSearch.setBounds(550, 80, 300, 30);
-        add(txtSearch);
+
+
+        
+String [] flip  = {"Electronics", "Clothes", "Bag", "Shoes", "accesories"};
+
+         btnBox = new JComboBox<>(flip);
+         btnBox.setBounds(550, 80, 300, 30);
+         btnBox.addActionListener(this);
+         add(btnBox);
+         
 
       
        
@@ -40,6 +46,8 @@ public class Home extends JFrame implements ActionListener {
         searchBtn.setBounds(900, 80, 100, 30);
         searchBtn.addActionListener(this);
         add(searchBtn);
+
+       
 
         
         btnElectronics = new JButton("Electronics");
@@ -52,20 +60,23 @@ public class Home extends JFrame implements ActionListener {
         btnClothes.addActionListener(this);
         add(btnClothes);
 
-        btnFood = new JButton("Food");
-        btnFood.setBounds(440, 150, 150, 40);
-        btnFood.addActionListener(this);
-        add(btnFood);
+        btnBag = new JButton("Bag");
+        btnBag.setBounds(440, 150, 150, 40);
+        btnBag.addActionListener(this);
+        add(btnBag);
 
-        btnSignup = new JButton("SignUp");
-        btnSignup.setBounds(1070, 20, 80, 30);
-        btnSignup.addActionListener(this);
-        add(btnSignup);
 
-        btnLogin = new JButton("Log In");
-        btnLogin.setBounds(1150, 20, 80, 30);
-        btnLogin.addActionListener(this);
-        add(btnLogin);
+        btnShoes = new JButton("Shoes");
+        btnShoes.setBounds(610, 150, 150, 40);
+        btnShoes.addActionListener(this);
+        add(btnShoes);
+
+        btnA = new JButton("Accesories");
+        btnA.setBounds(780, 150, 150, 40);
+        btnA.addActionListener(this);
+        add(btnA);
+
+        
 
 
 
@@ -79,30 +90,62 @@ public class Home extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
 
-
+        dispose();
         if (e.getSource() == searchBtn) {
-            String search = txtSearch.getText().toLowerCase();
+            String search = (String) btnBox.getSelectedItem();
 
-        if (search.contains("phone")) {
-            SignUp s = new SignUp();
-            s.setVisible(true);
-            dispose();
+        if (search.contains("Electronics")) {
 
-    }  else {
+            Electronics el = new Electronics();
+             el.setVisible(true);
+            
+
+    }  else if(search.contains("Clothes")){
+
+        Clothes c = new Clothes();
+        c.setVisible(true);
+
+    }  else if(search.contains("Bag")){
+
+         Bag b = new Bag();
+        b.setVisible(true);
+    
+    }else {
             NOthing n = new NOthing();
             n.setVisible(true);
         }
-    }
 
-    
-    if (e.getSource() == btnSignup) {
-        SignUp s = new SignUp();
+    }  if(e.getSource() == btnElectronics){
+
+        Electronics el = new Electronics();
+        el.setVisible(true);
+
+
+    } if(e.getSource() == btnClothes){
+
+        Clothes c = new Clothes();
+        c.setVisible(true);
+
+
+    } if(e.getSource() == btnBag){
+
+        Bag b = new Bag();
+        b.setVisible(true);
+
+
+    } if(e.getSource() == btnA){
+
+        Accesories a = new Accesories();
+        a.setVisible(true);
+
+
+    } if(e.getSource() == btnShoes){
+
+        Shoes s = new Shoes();
         s.setVisible(true);
+
+
     }
-
-
-      
-
 
 
 
