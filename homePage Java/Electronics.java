@@ -4,10 +4,10 @@ import java.awt.event.*;
 public class Electronics extends JFrame implements ActionListener {
 
 private JLabel lblRef, lblW, lblM,lblItem, lblrefPrice, lblwPRice, lblmPrice, lblrefQ, lblWQ, lblMQ;
-private JButton btnHomepage, btnaddRef, btnminusRef, btnaddW, btnminusW, btnaddM,btnminusM,btnC,btnB,btnAddCart;
-private int num1 = 0;
-private int num2 = 0;
-private int num3 = 0;
+private JButton btnHomepage, btnaddRef, btnminusRef, btnaddW, btnminusW, btnaddM,btnminusM,btnC,btnB,btnAddCart,btnOven,btnWM;
+public int num1 = 0;
+public int num2 = 0;
+public int num3 = 0;
 public JLabel name ;
 
 
@@ -45,6 +45,12 @@ Electronics(){
     add(btnminusRef );
 
 
+    btnB = new JButton("Buy Now");
+    btnB.setBounds(320, 160  , 90, 20);
+    btnB.addActionListener(this);
+    add(btnB);
+
+
     //---------------------------------------------------
 
     lblM = new JLabel("Oven");
@@ -52,7 +58,7 @@ Electronics(){
     add(lblM );
 
     lblmPrice = new JLabel("Price: 60");
-    lblmPrice.setBounds(50, 260, 100, 20);
+    lblmPrice.setBounds(50, 260, 100, 50);
     add(lblmPrice );
 
 
@@ -69,6 +75,12 @@ Electronics(){
     btnminusM.setBounds(260, 290, 60, 20);
     btnminusM.addActionListener(this);
     add(btnminusM );
+
+    btnOven = new JButton("Buy Now");
+    btnOven.setBounds(330, 290  , 90, 20);
+    btnOven.addActionListener(this);
+    add(btnOven);
+
 
     
 
@@ -97,19 +109,22 @@ Electronics(){
     btnminusW.addActionListener(this);
     add(btnminusW );
 
+
+    btnWM = new JButton("Buy Now");
+    btnWM.setBounds(320, 420  , 90, 20);
+    btnWM.addActionListener(this);
+    add(btnWM);
+
 //---------------------------------------------------------------------------
 
 
 
     btnHomepage = new JButton("Home");
-    btnHomepage.setBounds(700, 750  , 100, 30);
+    btnHomepage.setBounds(600, 750  , 100, 30);
     btnHomepage.addActionListener(this);
     add(btnHomepage);
 
-    btnB = new JButton("Buy Now");
-    btnB.setBounds(600, 750  , 100, 30);
-    btnB.addActionListener(this);
-    add(btnB);
+    
 
     btnC = new JButton("Clear All");
     btnC.setBounds(500, 750  , 100, 30);
@@ -132,9 +147,9 @@ Electronics(){
 }
 @Override
 public void actionPerformed(ActionEvent e) {
-   
      if(e.getSource()==btnHomepage){
-        dispose();
+           dispose();
+
         Home h = new Home();
         h.setVisible(true);
 
@@ -177,14 +192,48 @@ public void actionPerformed(ActionEvent e) {
         }
     }
 
+
+
+
 //-----------------------------------------------------------
 
-    if(e.getSource() == btnB){
-        BuyNow b = new BuyNow(num1,num2,num3);
-        b.setVisible(true);
+    if(e.getSource() == btnC){
 
         
+         num1 = 0;
+         num2 = 0;
+         num3 = 0;
+
+        lblrefQ.setText("Quantity: " + num1);
+        lblWQ.setText("Quantity: " + num2);
+        lblMQ.setText("Quantity: " + num3);
+
+
+
         
+    } if (e.getSource() == btnB){
+   dispose();
+
+   if(num1 > 0 ){
+    BtnRef b = new BtnRef(num1);
+        b.setVisible(true);
+
+
+   }
+    }if(e.getSource() == btnOven){
+        dispose();
+        BtnOven bo = new BtnOven(num2);
+        bo.setVisible(true);
+
+
+
+    }if(e.getSource() == btnWM){
+        dispose();
+        BtnWM bw = new BtnWM(num3);
+       bw.setVisible(true);
+
+
+
     }
 
 
