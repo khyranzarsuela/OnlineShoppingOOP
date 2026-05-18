@@ -3,7 +3,7 @@ import javax.swing.*;
 import java.awt.event.*;
 public class Electronics extends JFrame implements ActionListener {
 
-private JLabel lblRef, lblW, lblM,lblItem, lblrefPrice, lblwPRice, lblmPrice, lblrefQ, lblWQ, lblMQ;
+public JLabel lblRef, lblW, lblM,lblItem, lblrefPrice, lblwPRice, lblmPrice, lblrefQ, lblWQ, lblMQ;
 private JButton btnHomepage, btnaddRef, btnminusRef, btnaddW, btnminusW, btnaddM,btnminusM,btnC,btnB,btnAddCart,btnOven,btnWM;
 public int num1 = 0;
 public int num2 = 0;
@@ -22,62 +22,62 @@ Electronics(){
 
 
     //---------------------------------------------------------------------
-    lblRef = new JLabel("Ref:");
-    lblRef.setBounds(50, 100, 100, 20);
+    lblRef = new JLabel("Panasonic NR-BP242VS Inverter Type  Standard Refrigerator");
+    lblRef.setBounds(50, 100, 300, 20);
     add(lblRef );
 
-    lblrefPrice = new JLabel("Price: 50");
-    lblrefPrice.setBounds(50, 130, 100, 20);
+    lblrefPrice = new JLabel("18999");
+    lblrefPrice.setBounds(50, 120, 100, 20);
     add(lblrefPrice );
 
     lblrefQ = new JLabel("Quantity " + 0);
-    lblrefQ.setBounds(50, 160, 100, 20);
+    lblrefQ.setBounds(50, 140, 100, 20);
     add(lblrefQ );
 
     btnaddRef = new JButton(" + ");
-    btnaddRef.setBounds(190, 160, 60, 20);
+    btnaddRef.setBounds(190, 140, 60, 20);
     btnaddRef.addActionListener(this);
     add(btnaddRef );
 
     btnminusRef = new JButton(" - ");
-    btnminusRef.setBounds(260, 160, 60, 20);
+    btnminusRef.setBounds(260, 140, 60, 20);
     btnminusRef.addActionListener(this);
     add(btnminusRef );
 
 
     btnB = new JButton("Buy Now");
-    btnB.setBounds(320, 160  , 90, 20);
+    btnB.setBounds(330, 140  , 90, 20);
     btnB.addActionListener(this);
     add(btnB);
 
 
     //---------------------------------------------------
 
-    lblM = new JLabel("Oven");
+    lblM = new JLabel("Asahi OT 612 Electric Oven Toaster 6L");
     lblM.setBounds(50, 230, 100, 20);
     add(lblM );
 
-    lblmPrice = new JLabel("Price: 60");
-    lblmPrice.setBounds(50, 260, 100, 50);
+    lblmPrice = new JLabel("1170");
+    lblmPrice.setBounds(50, 250, 100, 20);
     add(lblmPrice );
 
 
     lblMQ = new JLabel("Quantity " + 0);
-    lblMQ.setBounds(50, 290, 100, 20);
+    lblMQ.setBounds(50, 270, 100, 20);
     add(lblMQ );
 
     btnaddM = new JButton(" + ");
-    btnaddM.setBounds(190, 290, 60, 20);
+    btnaddM.setBounds(190, 270, 60, 20);
     btnaddM.addActionListener(this);
     add(btnaddM );
 
     btnminusM = new JButton(" - ");
-    btnminusM.setBounds(260, 290, 60, 20);
+    btnminusM.setBounds(260, 270, 60, 20);
     btnminusM.addActionListener(this);
     add(btnminusM );
 
     btnOven = new JButton("Buy Now");
-    btnOven.setBounds(330, 290  , 90, 20);
+    btnOven.setBounds(330, 270  , 90, 20);
     btnOven.addActionListener(this);
     add(btnOven);
 
@@ -86,32 +86,32 @@ Electronics(){
 
 //----------------------------------------------------------------------
 
-    lblW = new JLabel("Washing Machine");
+    lblW = new JLabel("TCL Top Load Washing Machine F1 Series,6.5/7.5 Honeycomb Crystal Drum,");
     lblW.setBounds(50, 360, 100, 20);
     add(lblW );
 
 
-    lblwPRice = new JLabel("Price: 70");
-    lblwPRice.setBounds(50, 390, 100, 20);
+    lblwPRice = new JLabel("8695");
+    lblwPRice.setBounds(50, 380, 100, 20);
     add(lblwPRice );
 
     lblWQ = new JLabel("Quantity " + 0);
-    lblWQ.setBounds(50, 420, 100, 20);
+    lblWQ.setBounds(50, 400, 100, 20);
     add(lblWQ );
 
     btnaddW = new JButton(" + ");
-    btnaddW.setBounds(190, 420, 60, 20);
+    btnaddW.setBounds(190, 400, 60, 20);
     btnaddW.addActionListener(this);
     add(btnaddW );
 
     btnminusW = new JButton(" - ");
-    btnminusW.setBounds(260, 420, 60, 20);
+    btnminusW.setBounds(260, 400, 60, 20);
     btnminusW.addActionListener(this);
     add(btnminusW );
 
 
     btnWM = new JButton("Buy Now");
-    btnWM.setBounds(320, 420  , 90, 20);
+    btnWM.setBounds(330, 400  , 90, 20);
     btnWM.addActionListener(this);
     add(btnWM);
 
@@ -214,30 +214,60 @@ public void actionPerformed(ActionEvent e) {
     } if (e.getSource() == btnB){
    dispose();
 
-   if(num1 > 0 ){
-    BtnRef b = new BtnRef(num1);
+   if(num1 > 0){
+
+     String lbl = lblrefPrice.getText();
+    int price = Integer.parseInt(lbl);
+
+    String lblS = lblRef.getText();
+    Buy b = new Buy(lblS,num1,price);
         b.setVisible(true);
 
+   }
+
+
+
+} if(e.getSource() == btnOven){
+    
+
+
+if(num3 > 0){
+dispose();
+        String lbl = lblmPrice.getText();
+        int price = Integer.parseInt(lbl);
+
+        String lblS = lblM.getText();
+        Buy b = new Buy(lblS,num3,price);
+        b.setVisible(true);
 
    }
-    }if(e.getSource() == btnOven){
+
+} if(e.getSource() == btnWM){
+
+    if(num2 > 0){
         dispose();
-        BtnOven bo = new BtnOven(num2);
-        bo.setVisible(true);
+        String lbl = lblwPRice.getText();
+        int price = Integer.parseInt(lbl);
 
-
-
-    }if(e.getSource() == btnWM){
-        dispose();
-        BtnWM bw = new BtnWM(num3);
-       bw.setVisible(true);
-
+        String lblS = lblW.getText();
+        Buy b = new Buy(lblS,num2,price);
+        b.setVisible(true);
 
 
     }
 
 
+    
+}
+
+
+
+
+
 
 
 }
 }
+
+
+    

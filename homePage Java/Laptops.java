@@ -1,7 +1,7 @@
 
 import javax.swing.*;
 import java.awt.event.*;
-public class Accesories extends JFrame implements ActionListener {
+public class Laptops extends JFrame implements ActionListener {
 
 public JLabel lbl1, lbl2, lbl3,lblItem, lbl1Price, lbl2PRice, lbl3Price, lbl1Q, lbl2Q, lbl3Q;
 private JButton btnHomepage, btnadd1, btnminus1, btnadd2, btnminus2, btnadd3,btnminus3,btnC,btn1,btnAddCart,btn3,btn2;
@@ -11,7 +11,7 @@ public int num3 = 0;
 public JLabel name ;
 
 
-Accesories(){
+Laptops(){
     setSize(1240,1240);
     setLayout(null);    
     setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -22,11 +22,11 @@ Accesories(){
 
 
     //---------------------------------------------------------------------
-    lbl1 = new JLabel("MMinimalist Cross Pendant Necklace");
+    lbl1 = new JLabel("LINEN CROPTOP SHIRT SET Sleeveless MIX KOREAN STYLE SUPER WIDE-TUBE HIGH-WAIST TROUSERS");
     lbl1.setBounds(50, 100, 600, 20);
     add(lbl1 );
 
-    lbl1Price = new JLabel("47");
+    lbl1Price = new JLabel("600");
     lbl1Price.setBounds(50, 120, 100, 20);
     add(lbl1Price );
 
@@ -53,11 +53,11 @@ Accesories(){
 
     //---------------------------------------------------
 
-    lbl3 = new JLabel("Korean Fashion Drip Oil Butterfly Necklace Bracelet Earring Ring Set");
+    lbl3 = new JLabel("Men's Long-Sleeved Linen Clothing Set for Cafe Includes Ruffled Linen Shirt");
     lbl3.setBounds(50, 230, 600, 20);
     add(lbl3 );
 
-    lbl3Price = new JLabel("47");
+    lbl3Price = new JLabel("570");
     lbl3Price.setBounds(50, 250, 100, 20);
     add(lbl3Price );
 
@@ -86,12 +86,12 @@ Accesories(){
 
 //----------------------------------------------------------------------
 
-    lbl2 = new JLabel("Non-Fading Titanium Steel Bracelet Female South Korea Fashion High-End Bracelet");
+    lbl2 = new JLabel("Palermo Top -- Ocha Wear | Trendy Halter Top | Elegant Top");
     lbl2.setBounds(50, 360, 600, 20);
     add(lbl2 );
 
 
-    lbl2PRice = new JLabel("70");
+    lbl2PRice = new JLabel("350");
     lbl2PRice.setBounds(50, 380, 100, 20);
     add(lbl2PRice );
 
