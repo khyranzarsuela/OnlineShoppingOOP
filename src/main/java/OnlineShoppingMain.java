@@ -1,5 +1,3 @@
-package MainProgram;
-
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
@@ -16,7 +14,8 @@ public class OnlineShoppingMain {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        System.out.println("Hello World");
+       Header h = new Header();
+       h.setVisible(true);
     }
     
 }
