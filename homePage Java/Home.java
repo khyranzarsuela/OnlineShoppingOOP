@@ -21,21 +21,21 @@ public class Home extends JFrame implements ActionListener {
 
     Home(){
 
-        setTitle("O:Shop");
+        setTitle("ShopBee");
         setSize(1240, 1240);
         setLayout(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
         color = new JPanel();
         color.setLayout(null);
-        color.setBackground(new Color(255,102,0)); 
+        color.setBackground(new Color(255,191,0)); 
         color.setBounds(0, 0, 1700, 150);
         add(color);
 
 
-        title = new JLabel("O:Shop");
+        title = new JLabel("ShopBee");
         title.setBounds(70, 80, 400, 30);
-        title.setForeground(Color.WHITE);
+        title.setForeground(Color.BLACK);
         title.setFont(new Font("Arial", Font.BOLD, 35));
         color.add(title);
 
@@ -47,7 +47,7 @@ public class Home extends JFrame implements ActionListener {
 String [] flip  = {"Electronics", 
                     "Clothes", 
                     "Bag", 
-                    "Shoes", 
+                    "Men Shoes", 
                     "accesories",
                     "Camera",
                     "Laptops",
@@ -77,7 +77,8 @@ String [] flip  = {"Electronics",
 
         categories = new JLabel("Categories");
         categories.setBounds(170, 170, 150, 50);
-        categories.setFont(new java.awt.Font("Arial", java.awt.Font.BOLD, 24));
+        categories.setFont(new Font("Arial", Font.BOLD, 24));
+        categories.setBackground(Color.BLACK);
         add(categories);
 
        
@@ -85,72 +86,86 @@ String [] flip  = {"Electronics",
         
         btnElectronics = new JButton("Electronics");
         btnElectronics.setBounds(170, 240, 150, 60);
+        btnElectronics.setBackground(new Color(255,191,0));
         btnElectronics.addActionListener(this);
         add(btnElectronics);
 
         btnCamera = new JButton("Cameras");
         btnCamera.setBounds(170, 320, 150, 60);
+        btnCamera.setBackground(new Color(255,191,0));
         btnCamera.addActionListener(this);
         add(btnCamera);
 
         btnClothes = new JButton("Clothes");
         btnClothes.setBounds(340, 240, 150, 60);
+        btnClothes.setBackground(new Color(255,191,0));
         btnClothes.addActionListener(this);
         add(btnClothes);
 
         btnLaptops = new JButton("Laptops");
         btnLaptops.setBounds(340, 320, 150, 60);
+        btnLaptops.setBackground(new Color(255,191,0));
         btnLaptops.addActionListener(this);
         add(btnLaptops);
 
         btnBag = new JButton("Bag");
         btnBag.setBounds(510, 240, 150, 60);
+        btnBag.setBackground(new Color(255,191,0));
         btnBag.addActionListener(this);
         add(btnBag);
 
         btnSports = new JButton("Sports");
         btnSports.setBounds(510, 320, 150, 60);
+        btnSports.setBackground(new Color(255,191,0));
         btnSports.addActionListener(this);
         add(btnSports);
 
 
         btnMShoes = new JButton("Men Shoes");
         btnMShoes.setBounds(680, 240, 150, 60);
+        btnMShoes.setBackground(new Color(255,191,0));
         btnMShoes.addActionListener(this);
         add(btnMShoes);
 
         btnWShoes = new JButton("Women Shoes");
         btnWShoes.setBounds(680, 320, 150, 60);
+        btnWShoes.setBackground(new Color(255,191,0));
         btnWShoes.addActionListener(this);
         add(btnWShoes);
 
         btnA = new JButton("Accesories");
         btnA.setBounds(850, 240, 150, 60);
+        btnA.setBackground(new Color(255,191,0));
         btnA.addActionListener(this);
         add(btnA);
 
         btnMakeup = new JButton("Makeup");
         btnMakeup.setBounds(850, 320, 150, 60);
+        btnMakeup.setBackground(new Color(255,191,0));
         btnMakeup.addActionListener(this);
         add(btnMakeup);
 
         btnMobiles = new JButton("Mobiles");
         btnMobiles.setBounds(1020, 240, 150, 60);
+        btnMobiles.setBackground(new Color(255,191,0));
         btnMobiles.addActionListener(this);
         add(btnMobiles);
 
         btnBabies = new JButton("Babies Needs");
         btnBabies.setBounds(1020, 320, 150, 60);
+        btnBabies.setBackground(new Color(255,191,0));
         btnBabies.addActionListener(this);
         add(btnBabies);
 
         btnHomeliving = new JButton("Home Living");
         btnHomeliving.setBounds(1190, 240, 150, 60);
+        btnHomeliving.setBackground(new Color(255,191,0));
         btnHomeliving.addActionListener(this);
         add(btnHomeliving);
 
         btntoys = new JButton("Toys");
         btntoys.setBounds(1190, 320, 150, 60);
+        btntoys.setBackground(new Color(255,191,0));
         btntoys.addActionListener(this);
         add(btntoys);
 
@@ -162,6 +177,11 @@ String [] flip  = {"Electronics",
 
         btnLogIn = new JButton("Log In");
         btnLogIn.setBounds(1120, 20, 120, 25);
+        btnLogIn.addActionListener(this);
+        color.add(btnLogIn);
+
+        btnLogIn = new JButton("Cart");
+        btnLogIn.setBounds(1240, 20, 120, 25);
         btnLogIn.addActionListener(this);
         color.add(btnLogIn);
         

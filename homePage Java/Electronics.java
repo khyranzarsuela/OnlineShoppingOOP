@@ -1,5 +1,8 @@
 
 import javax.swing.*;
+
+import java.awt.Color;
+import java.awt.Font;
 import java.awt.event.*;
 public class Electronics extends JFrame implements ActionListener {
 
@@ -8,7 +11,8 @@ private JButton btnHomepage, btnaddRef, btnminusRef, btnaddW, btnminusW, btnaddM
 public int num1 = 0;
 public int num2 = 0;
 public int num3 = 0;
-public JLabel name ;
+public JLabel name;
+
 
 
 Electronics(){
@@ -16,68 +20,78 @@ Electronics(){
     setLayout(null);    
     setDefaultCloseOperation(EXIT_ON_CLOSE);
 
+    
+
     lblItem = new JLabel("Items: ");
     lblItem.setBounds(50, 50, 100, 20);
     add(lblItem );
 
 
     //---------------------------------------------------------------------
-    lblRef = new JLabel("Panasonic NR-BP242VS Inverter Type  Standard Refrigerator");
-    lblRef.setBounds(50, 100, 300, 20);
+    lblRef = new JLabel("Refridgerator");
+    lblRef.setBounds(50, 100, 600, 20);
+    lblRef.setFont(new Font("Arial", Font.BOLD, 15));
     add(lblRef );
 
-    lblrefPrice = new JLabel("18999");
-    lblrefPrice.setBounds(50, 120, 100, 20);
+    lblrefPrice = new JLabel("600");
+    lblrefPrice.setBounds(60, 130, 100, 20);
     add(lblrefPrice );
 
     lblrefQ = new JLabel("Quantity " + 0);
-    lblrefQ.setBounds(50, 140, 100, 20);
+    lblrefQ.setBounds(50, 150, 100, 20);
     add(lblrefQ );
 
     btnaddRef = new JButton(" + ");
-    btnaddRef.setBounds(190, 140, 60, 20);
+    btnaddRef.setBounds(190, 150, 60, 20);
+    btnaddRef.setBackground(new Color(255,191,0));
     btnaddRef.addActionListener(this);
     add(btnaddRef );
 
     btnminusRef = new JButton(" - ");
-    btnminusRef.setBounds(260, 140, 60, 20);
+    btnminusRef.setBounds(260, 150, 60, 20);
+    btnminusRef.setBackground(new Color(255,191,0));
     btnminusRef.addActionListener(this);
     add(btnminusRef );
 
 
     btnB = new JButton("Buy Now");
-    btnB.setBounds(330, 140  , 90, 20);
+    btnB.setBounds(330, 150  , 90, 20);
+    btnB.setBackground(new Color(255,191,0));
     btnB.addActionListener(this);
     add(btnB);
 
 
     //---------------------------------------------------
 
-    lblM = new JLabel("Asahi OT 612 Electric Oven Toaster 6L");
-    lblM.setBounds(50, 230, 100, 20);
+     lblM = new JLabel("Microwave Oven");
+    lblM.setBounds(50, 240, 600, 20);
+    lblM.setFont(new Font("Arial", Font.BOLD, 15));
     add(lblM );
 
-    lblmPrice = new JLabel("1170");
-    lblmPrice.setBounds(50, 250, 100, 20);
+    lblmPrice = new JLabel("570");
+    lblmPrice.setBounds(60, 260, 100, 20);
     add(lblmPrice );
 
 
     lblMQ = new JLabel("Quantity " + 0);
-    lblMQ.setBounds(50, 270, 100, 20);
+    lblMQ.setBounds(50, 280, 100, 20);
     add(lblMQ );
 
     btnaddM = new JButton(" + ");
-    btnaddM.setBounds(190, 270, 60, 20);
+    btnaddM.setBounds(190, 280, 60, 20);
+    btnaddM.setBackground(new Color(255,191,0));
     btnaddM.addActionListener(this);
     add(btnaddM );
 
     btnminusM = new JButton(" - ");
-    btnminusM.setBounds(260, 270, 60, 20);
+    btnminusM.setBounds(260, 280, 60, 20);
+    btnminusM.setBackground(new Color(255,191,0));
     btnminusM.addActionListener(this);
     add(btnminusM );
 
     btnOven = new JButton("Buy Now");
-    btnOven.setBounds(330, 270  , 90, 20);
+    btnOven.setBounds(330, 280  , 90, 20);
+    btnOven.setBackground(new Color(255,191,0));
     btnOven.addActionListener(this);
     add(btnOven);
 
@@ -86,32 +100,36 @@ Electronics(){
 
 //----------------------------------------------------------------------
 
-    lblW = new JLabel("TCL Top Load Washing Machine F1 Series,6.5/7.5 Honeycomb Crystal Drum,");
-    lblW.setBounds(50, 360, 100, 20);
+   lblW = new JLabel("Washing Machine");
+    lblW.setBounds(50, 370, 600, 20);
+    lblW.setFont(new Font("Arial", Font.BOLD, 15));
     add(lblW );
 
 
-    lblwPRice = new JLabel("8695");
-    lblwPRice.setBounds(50, 380, 100, 20);
+    lblwPRice = new JLabel("350");
+    lblwPRice.setBounds(60, 390, 100, 20);
     add(lblwPRice );
 
-    lblWQ = new JLabel("Quantity " + 0);
-    lblWQ.setBounds(50, 400, 100, 20);
+    lblWQ  = new JLabel("Quantity " + 0);
+    lblWQ .setBounds(50, 410, 100, 20);
     add(lblWQ );
 
     btnaddW = new JButton(" + ");
-    btnaddW.setBounds(190, 400, 60, 20);
+    btnaddW.setBounds(190, 410, 60, 20);
+    btnaddW.setBackground(new Color(255,191,0));
     btnaddW.addActionListener(this);
     add(btnaddW );
 
     btnminusW = new JButton(" - ");
-    btnminusW.setBounds(260, 400, 60, 20);
+    btnminusW.setBounds(260, 410, 60, 20);
+    btnminusW.setBackground(new Color(255,191,0));
     btnminusW.addActionListener(this);
     add(btnminusW );
 
 
     btnWM = new JButton("Buy Now");
-    btnWM.setBounds(330, 400  , 90, 20);
+    btnWM.setBounds(330, 410  , 90, 20);
+    btnWM.setBackground(new Color(255,191,0));
     btnWM.addActionListener(this);
     add(btnWM);
 
@@ -121,6 +139,7 @@ Electronics(){
 
     btnHomepage = new JButton("Home");
     btnHomepage.setBounds(600, 750  , 100, 30);
+    btnHomepage.setBackground(new Color(255,191,0));
     btnHomepage.addActionListener(this);
     add(btnHomepage);
 
@@ -128,11 +147,13 @@ Electronics(){
 
     btnC = new JButton("Clear All");
     btnC.setBounds(500, 750  , 100, 30);
+    btnC.setBackground(new Color(255,191,0));
     btnC.addActionListener(this);
     add(btnC);
 
     btnAddCart = new JButton("Add to Cart");
     btnAddCart.setBounds(400, 750  , 100, 30);
+    btnAddCart.setBackground(new Color(255,191,0));
     btnAddCart.addActionListener(this);
     add(btnAddCart);
 
