@@ -1,10 +1,11 @@
+package Home;
 
 import javax.swing.*;
 
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.*;
-public class Laptops extends JFrame implements ActionListener {
+public class Shoes extends JFrame implements ActionListener {
 
 public JLabel lbl1, lbl2, lbl3,lblItem, lbl1Price, lbl2PRice, lbl3Price, lbl1Q, lbl2Q, lbl3Q,lblPeso,lblPeso2,lblPeso3;
 private JButton btnHomepage, btnadd1, btnminus1, btnadd2, btnminus2, btnadd3,btnminus3,btnC,btn1,btnAddCart,btn3,btn2;
@@ -14,11 +15,12 @@ public int num3 = 0;
 public JLabel name;
 
 
-Laptops(){
+Shoes(){
     setSize(1240,1240);
     setLayout(null);    
     setDefaultCloseOperation(EXIT_ON_CLOSE);
 
+    
     
 
     lblItem = new JLabel("Items: ");
@@ -40,12 +42,12 @@ Laptops(){
 
 
     //---------------------------------------------------------------------
-    lbl1 = new JLabel("MSI Thin A15 B7UC-655PHNN 15.6 FHD | Ryzen 5 7535HS| 8GB RAM | RTX 3050 |");
+    lbl1 = new JLabel("Sneakers");
     lbl1.setBounds(50, 100, 600, 20);
     lbl1.setFont(new Font("Arial", Font.BOLD, 15));
     add(lbl1 );
 
-    lbl1Price = new JLabel("69999");
+    lbl1Price = new JLabel("2000");
     lbl1Price.setBounds(60, 130, 100, 20);
     add(lbl1Price );
 
@@ -75,12 +77,12 @@ Laptops(){
 
     //---------------------------------------------------
 
-    lbl3 = new JLabel("ASUS Laptop B1503CVA Intel Core 5 / 7 |15\" FHD|16GB+512GB SSD| Windows 11 Pro");
+    lbl3 = new JLabel("Addidas");
     lbl3.setBounds(50, 240, 600, 20);
     lbl3.setFont(new Font("Arial", Font.BOLD, 15));
     add(lbl3 );
 
-    lbl3Price = new JLabel("64786");
+    lbl3Price = new JLabel("350");
     lbl3Price.setBounds(60, 260, 100, 20);
     add(lbl3Price );
 
@@ -112,13 +114,13 @@ Laptops(){
 
 //----------------------------------------------------------------------
 
-    lbl2 = new JLabel("Dell Inspiron 5430 Laptop i5 or i7 14inch FHD Screen");
+    lbl2 = new JLabel("Nike");
     lbl2.setBounds(50, 370, 600, 20);
     lbl2.setFont(new Font("Arial", Font.BOLD, 15));
     add(lbl2 );
 
 
-    lbl2PRice = new JLabel("75490");
+    lbl2PRice = new JLabel("420");
     lbl2PRice.setBounds(60, 390, 100, 20);
     add(lbl2PRice );
 

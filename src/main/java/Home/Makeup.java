@@ -1,10 +1,12 @@
+package Home;
 
 import javax.swing.*;
 
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.*;
-public class Clothes extends JFrame implements ActionListener {
+public class Makeup extends JFrame implements ActionListener {
+
 
 public JLabel lbl1, lbl2, lbl3,lblItem, lbl1Price, lbl2PRice, lbl3Price, lbl1Q, lbl2Q, lbl3Q,lblPeso,lblPeso2,lblPeso3;
 private JButton btnHomepage, btnadd1, btnminus1, btnadd2, btnminus2, btnadd3,btnminus3,btnC,btn1,btnAddCart,btn3,btn2;
@@ -14,10 +16,13 @@ public int num3 = 0;
 public JLabel name;
 
 
-Clothes(){
+
+Makeup(){
     setSize(1240,1240);
     setLayout(null);    
     setDefaultCloseOperation(EXIT_ON_CLOSE);
+
+    
 
     
 
@@ -40,12 +45,12 @@ Clothes(){
 
 
     //---------------------------------------------------------------------
-    lbl1 = new JLabel("LINEN CROPTOP SHIRT SET Sleeveless MIX KOREAN STYLE SUPER WIDE-TUBE HIGH-WAIST TROUSERS");
+    lbl1 = new JLabel("O'CHAIN Non fading moisturizing gloss lip gloss,brightens skin tone");
     lbl1.setBounds(50, 100, 600, 20);
     lbl1.setFont(new Font("Arial", Font.BOLD, 15));
     add(lbl1 );
 
-    lbl1Price = new JLabel("600");
+    lbl1Price = new JLabel("105");
     lbl1Price.setBounds(60, 130, 100, 20);
     add(lbl1Price );
 
@@ -75,12 +80,12 @@ Clothes(){
 
     //---------------------------------------------------
 
-    lbl3 = new JLabel("Men's Long-Sleeved Linen Clothing Set for Cafe Includes Ruffled Linen Shirt");
+    lbl3 = new JLabel("PINKFLASH Soft Smooth Pigmented Natural 3D Contour Highlighter Pressed Powder Makeup");
     lbl3.setBounds(50, 240, 600, 20);
     lbl3.setFont(new Font("Arial", Font.BOLD, 15));
     add(lbl3 );
 
-    lbl3Price = new JLabel("570");
+    lbl3Price = new JLabel("85");
     lbl3Price.setBounds(60, 260, 100, 20);
     add(lbl3Price );
 
@@ -112,13 +117,13 @@ Clothes(){
 
 //----------------------------------------------------------------------
 
-    lbl2 = new JLabel("Palermo Top -- Ocha Wear | Trendy Halter Top | Elegant Top");
+    lbl2 = new JLabel(" Super Coverage Always Matte Foundation Powder (Color 120) 4.5g Powder Foundation");
     lbl2.setBounds(50, 370, 600, 20);
     lbl2.setFont(new Font("Arial", Font.BOLD, 15));
     add(lbl2 );
 
 
-    lbl2PRice = new JLabel("350");
+    lbl2PRice = new JLabel("199");
     lbl2PRice.setBounds(60, 390, 100, 20);
     add(lbl2PRice );
 

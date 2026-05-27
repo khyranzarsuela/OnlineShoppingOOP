@@ -1,3 +1,4 @@
+package Home;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
@@ -59,7 +60,7 @@ String [] flip  = {"Electronics",
                     "Toys",
                     "Women Shoes"};
 
-         btnBox = new JComboBox<>(flip);
+         btnBox = new JComboBox<String>(flip);
          btnBox.setBounds(230, 80, 800, 40);
          btnBox.addActionListener(this);
          color.add(btnBox);

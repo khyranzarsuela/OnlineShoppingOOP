@@ -1,3 +1,4 @@
+package Home;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
@@ -107,6 +108,10 @@ public class Buy extends JFrame implements ActionListener {
                  try{
 
                     int gpay = Integer.parseInt(Gnumber);
+
+                    if(String.valueOf(gpay).length() != 11){
+                        JOptionPane.showMessageDialog(null, "GCash number must be 11 digits!");
+                        }
 
 
 
