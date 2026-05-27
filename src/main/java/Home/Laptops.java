@@ -1,20 +1,21 @@
+package Home;
 
 import javax.swing.*;
 
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.*;
-public class Mobiles extends JFrame implements ActionListener {
+public class Laptops extends JFrame implements ActionListener {
 
 public JLabel lbl1, lbl2, lbl3,lblItem, lbl1Price, lbl2PRice, lbl3Price, lbl1Q, lbl2Q, lbl3Q,lblPeso,lblPeso2,lblPeso3;
 private JButton btnHomepage, btnadd1, btnminus1, btnadd2, btnminus2, btnadd3,btnminus3,btnC,btn1,btnAddCart,btn3,btn2;
 public int num1 = 0;
 public int num2 = 0;
 public int num3 = 0;
-public JLabel name ;
+public JLabel name;
 
 
-Mobiles(){
+Laptops(){
     setSize(1240,1240);
     setLayout(null);    
     setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -40,12 +41,12 @@ Mobiles(){
 
 
     //---------------------------------------------------------------------
-    lbl1 = new JLabel("vivo V70 Cellphone丨50MP Camera丨4K 60fps Video丨6500mAh Battery+90W FlashCha");
+    lbl1 = new JLabel("MSI Thin A15 B7UC-655PHNN 15.6 FHD | Ryzen 5 7535HS| 8GB RAM | RTX 3050 |");
     lbl1.setBounds(50, 100, 600, 20);
     lbl1.setFont(new Font("Arial", Font.BOLD, 15));
     add(lbl1 );
 
-    lbl1Price = new JLabel("35999");
+    lbl1Price = new JLabel("69999");
     lbl1Price.setBounds(60, 130, 100, 20);
     add(lbl1Price );
 
@@ -75,12 +76,12 @@ Mobiles(){
 
     //---------------------------------------------------
 
-    lbl3 = new JLabel("Infinix NOTE 60 Pro 5G (up to 16GB [8+256] Snapdragon 7s, 144Hz Active-Matrix");
+    lbl3 = new JLabel("ASUS Laptop B1503CVA Intel Core 5 / 7 |15\" FHD|16GB+512GB SSD| Windows 11 Pro");
     lbl3.setBounds(50, 240, 600, 20);
     lbl3.setFont(new Font("Arial", Font.BOLD, 15));
     add(lbl3 );
 
-    lbl3Price = new JLabel("18613");
+    lbl3Price = new JLabel("64786");
     lbl3Price.setBounds(60, 260, 100, 20);
     add(lbl3Price );
 
@@ -112,13 +113,13 @@ Mobiles(){
 
 //----------------------------------------------------------------------
 
-    lbl2 = new JLabel("Samsung Galaxy A17 5G");
+    lbl2 = new JLabel("Dell Inspiron 5430 Laptop i5 or i7 14inch FHD Screen");
     lbl2.setBounds(50, 370, 600, 20);
     lbl2.setFont(new Font("Arial", Font.BOLD, 15));
     add(lbl2 );
 
 
-    lbl2PRice = new JLabel("12510");
+    lbl2PRice = new JLabel("75490");
     lbl2PRice.setBounds(60, 390, 100, 20);
     add(lbl2PRice );
 
